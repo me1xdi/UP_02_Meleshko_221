@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:UP_02.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddPartnersPage">
+      Title="Добавление/изменение партнеров">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -21,20 +21,19 @@
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="39*"/>
-            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="117*"/>
         </Grid.ColumnDefinitions>
         <TextBox x:Name="TbName" Grid.Column="1" Text="{Binding Name}" HorizontalAlignment="Left"  Margin="10,5,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" />
         <ComboBox x:Name="CbType" SelectedItem="{Binding PartnersType}" DisplayMemberPath="Type" SelectedValuePath="Id"  Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.286" >
-            <!--<ComboBoxItem Content=""/>-->
         </ComboBox>
         <TextBox x:Name="TbRate" Grid.Column="1" Text="{Binding Rating}" HorizontalAlignment="Left"  Margin="10,4,0,0" Grid.Row="2" TextWrapping="Wrap"  VerticalAlignment="Top" />
-        <TextBox x:Name="TbAddress" Grid.Column="1" Text="{Binding Address}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" />
+        <TextBox x:Name="TbAddress" Grid.Column="1" Text="{Binding Address}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top"  />
         <TextBox x:Name="TbINN" Grid.Column="1" Text="{Binding INN}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="4" TextWrapping="Wrap"  VerticalAlignment="Top" />
         <TextBox x:Name="TbFIO" Grid.Column="1" Text="{Binding Director}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="5" TextWrapping="Wrap"  VerticalAlignment="Top" />
         <TextBox x:Name="TbPhone"  Grid.Column="1" Text="{Binding PhoneNumber}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="6" TextWrapping="Wrap"  VerticalAlignment="Top" />
-        <TextBox x:Name="TbEmail" Grid.Column="1" Text="{Binding Email}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="7" TextWrapping="Wrap"  VerticalAlignment="Top" />
-        <Label Content="Наименование" Margin="0,5,0,0" VerticalAlignment="Top" Width="160" HorizontalAlignment="Right"/>
+        <TextBox x:Name="TbEmail" Grid.Column="1" Text="{Binding Email}" HorizontalAlignment="Left"  Margin="10,5,0,0" Grid.Row="7" TextWrapping="Wrap"  VerticalAlignment="Top"  />
+        <Label Content="Наименование" Margin="0,5,0,0" VerticalAlignment="Top"  HorizontalAlignment="Right"/>
         <Label Content="Тип партнера" HorizontalAlignment="Right" Margin="0,4,0,0" Grid.Row="1" VerticalAlignment="Top" Height="36"/>
         <Label Content="Рейтинг" HorizontalAlignment="Right" Margin="0,4,0,0" Grid.Row="2" VerticalAlignment="Top" Height="36"/>
         <Label Content="Адрес" HorizontalAlignment="Right" Margin="0,6,0,0" Grid.Row="3" VerticalAlignment="Top" Height="34"/>
@@ -42,8 +41,9 @@
         <Label Content="ФИО директора" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="5" VerticalAlignment="Top"/>
         <Label Content="Телефон" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="6" VerticalAlignment="Top"/>
         <Label Content="Email компании" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="7" VerticalAlignment="Top"/>
-        <Button x:Name="BtCancel" Content="Отмена" Margin="0,5,25,0" Grid.Row="8" VerticalAlignment="Top" Width="115" HorizontalAlignment="Right" Click="BtCancel_Click" />
-        <Button x:Name="BtSave" Content="Сохранить" Grid.Column="1" HorizontalAlignment="Left" Margin="45,5,0,0" Grid.Row="8" VerticalAlignment="Top" Click="BtSave_Click" />
+        <!--<Button x:Name="BtCancel" Content="Отмена" Margin="0,5,5,0" Grid.Row="8" VerticalAlignment="Top"  HorizontalAlignment="Right" Click="BtCancel_Click" />-->
+        <Button x:Name="BtSave" Content="Сохранить" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="8" VerticalAlignment="Top" Click="BtSave_Click" />
+        <Button x:Name="BtHistory" Content="История реализации" HorizontalAlignment="Left" Margin="350,0,0,0" VerticalAlignment="Top" Grid.Row="8" Click="BtHistory_Click" Grid.Column="1" />
 
     </Grid>
 </Page>

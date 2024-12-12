@@ -27,7 +27,14 @@ namespace UP_02.Pages
         {
             InitializeComponent();
             if (selectedPartner != null)
+            {
                 _currenPartner = selectedPartner;
+
+            }
+            else 
+            { 
+                BtHistory.Visibility = Visibility.Hidden; 
+            }
             DataContext = _currenPartner;
 
             CbType.ItemsSource = Entities.GetContext().PartnersType.ToList();
@@ -37,10 +44,10 @@ namespace UP_02.Pages
 
         }
 
-        private void BtCancel_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.GoBack();
-        }
+        //private void BtCancel_Click(object sender, RoutedEventArgs e)
+        //{
+        //    NavigationService.GoBack();
+        //}
 
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
@@ -124,5 +131,12 @@ namespace UP_02.Pages
             }
 
         }
+
+        private void BtHistory_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PartnerHistoryPage(_currenPartner));
+        }
+
+        
     }
 }

@@ -6,15 +6,16 @@
       xmlns:local="clr-namespace:UP_02.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Partners">
+      Title="Партнеры">
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListView Name="ListPartners" Grid.Column="0"  ItemsSource="{Binding Partners}">
+        <ListView Name="ListPartners" Grid.Column="0" MouseDoubleClick="ListPartners_MouseDoubleClick"  ItemsSource="{Binding Partners}" >
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderThickness="1" BorderBrush="Gray" Margin="5" Padding="10" Width="450">
@@ -22,7 +23,7 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="2*" />
@@ -43,7 +44,7 @@
 
                                 <!--<TextBlock Text="{Binding PartnersType.Type}"   />
                                 <TextBlock Text="{Binding Name}" />-->
-                                <TextBlock Text="{Binding Director}" />
+                                <TextBlock Text="{Binding Director}"  />
                                 <TextBlock Text="{Binding PhoneNumber}" />
                                 <TextBlock Text="Рейтинг: "  />
                                 <TextBlock Text="{Binding Rating}" />
@@ -55,7 +56,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="BtAdd" Content="Добавить" Grid.Column="1" Margin="0,0,85,30" Height="35" Width="115" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtAdd_Click" />
+        <Button x:Name="BtAdd" Content="Добавить" Grid.Column="1" Margin="0,0,55,30"   HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtAdd_Click" />
         <Image Source="/Resources/logo.png" Grid.Column="1" Margin="0,50,55,0" Height="190" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190"/>
 
     </Grid>

@@ -43,7 +43,7 @@ namespace UP_02
         {
             if (!(e.Content is Page page)) return;
             this.Title = $"ProjectByMeleshko - {page.Title}";
-            if (page is Pages.PartnersPage)
+            if (page is Pages.PartnersPage )
                 BackButton.Visibility = Visibility.Hidden;
             else
                 BackButton.Visibility = Visibility.Visible;

@@ -8,7 +8,7 @@
         Title="MainWindow" Icon="Resources\icon.ico" Height="450" Width="800" Closing="Window_Closing">
     <Grid Background="#F4E8D3 ">
         <Frame x:Name="MainFrame" Background="#FFFFFF" NavigationUIVisibility="Hidden" Source="Pages/PartnersPage.xaml" Grid.Row="1" Navigated="MainFrame_Navigated" />
-        <Button x:Name ="BackButton"  Content="Назад" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" ToolTip="Нажмите, чтобы вернуться назад" Click="BackButton_Click"/>
+        <Button x:Name ="BackButton"  Content="Назад" HorizontalAlignment="Left" Margin="20,5,0,5" VerticalAlignment="Center" ToolTip="Нажмите, чтобы вернуться назад" Click="BackButton_Click"/>
         <Label x:Name="timerLb"  Content=""  Grid.Row="2" Height="30" VerticalAlignment="Bottom" Width="190" HorizontalAlignment="Right"/>
         <Grid.RowDefinitions>
             <RowDefinition Height="45" />

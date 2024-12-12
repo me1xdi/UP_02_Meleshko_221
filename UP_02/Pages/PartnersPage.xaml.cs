@@ -32,6 +32,23 @@ namespace UP_02.Pages
         private void BtAdd_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddPartnersPage(null));
+            
+        }
+
+        private void ListPartners_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is ListBox listBox)
+            {
+               
+                var selectedItem = listBox.SelectedItem as Partners;
+
+                
+                if (selectedItem != null)
+                {
+                    NavigationService.Navigate(new AddPartnersPage(selectedItem));
+                }
+            }
+          
         }
     }
 }
