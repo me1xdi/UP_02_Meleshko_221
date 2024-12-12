@@ -22,11 +22,12 @@ namespace UP_02.Pages
     /// </summary>
     public partial class PartnersPage : Page
     {
+        private List<Partn> newPartners;
         public PartnersPage()
         {
             InitializeComponent();
-            var currentPartners = Entities.GetContext().Partners.Include(p => p.PartnersType).ToList();
-            List<Partn> newPartners = new List<Partn>();
+            var currentPartners = Entities.GetContext().Partners.ToList();
+            newPartners = new List<Partn>(); 
             foreach (Partners partner in currentPartners)
             {
                 newPartners.Add(new Partn(partner));
@@ -45,16 +46,17 @@ namespace UP_02.Pages
             if (sender is ListBox listBox)
             {
                
-                var selectedItem = listBox.SelectedItem as Partners;
+                var selectedItem = listBox.SelectedItem as Partn;
 
                 
                 if (selectedItem != null)
                 {
-                    NavigationService.Navigate(new AddPartnersPage(selectedItem));
+                    NavigationService.Navigate(new AddPartnersPage(selectedItem.partner));
                 }
             }
           
         }
+
     }
     class Partn : Partners
     {

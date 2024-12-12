@@ -36,18 +36,8 @@ namespace UP_02.Pages
                 BtHistory.Visibility = Visibility.Hidden; 
             }
             DataContext = _currenPartner;
-
             CbType.ItemsSource = Entities.GetContext().PartnersType.ToList();
-
-
-
-
         }
-
-        //private void BtCancel_Click(object sender, RoutedEventArgs e)
-        //{
-        //    NavigationService.GoBack();
-        //}
 
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
@@ -59,9 +49,7 @@ namespace UP_02.Pages
                 errors.AppendLine("Выберите тип партнера!");
             if (_currenPartner.Rating.ToString()=="")
                 errors.AppendLine("Укажите рейтинг партнера!");
-            
-            //else
-            //    _currentUser.Role = cBoxRole.Text;
+
             if (string.IsNullOrWhiteSpace(_currenPartner.Address))
                 errors.AppendLine("Укажите юридический адрес!");
             if (string.IsNullOrWhiteSpace(_currenPartner.INN))
@@ -80,7 +68,7 @@ namespace UP_02.Pages
             //string pattern = @"^[+]7\d{0,10}$";
             //string pattern1 = @"^\d{0,1}$";
 
-            if (!Regex.IsMatch(TbRate.Text, @"^\d{0,1}$") | TbRate.Text.Length > 2 | int.Parse(TbRate.Text)>10 | int.Parse(TbRate.Text) < 1)
+            if (!Regex.IsMatch(TbRate.Text, @"^\d{1}$|^10$") )
             {
                 MessageBox.Show("Введите рейтинг от 1 до 10!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
@@ -96,23 +84,7 @@ namespace UP_02.Pages
                 MessageBox.Show("Введите номер телефона в формате +7XXXXXXXXXX, состоящий из 12 символов!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-
-            //if (PasswordBox.Text.Length < 6)
-            //{
-            //    MessageBox.Show("Введите пароль минимум из 6 символов!");
-            //    return;
-            //}
-            //else if (!Regex.IsMatch(PasswordBox.Text, "^[a-zA-Z0-9]*$") | !Regex.IsMatch(PasswordBox.Text, "[0-9]+") | !Regex.IsMatch(PasswordBox.Text, "[A-Za-z]+"))
-            //{
-            //    MessageBox.Show("Доступна только английская раскладка! В пароле должна присутствовать хотя бы 1 цифра.");
-            //    return;
-            //}
-
-            using (var db = new Entities())
-            {
-                
-
-                
+           
                 if (_currenPartner.Id == 0)
                     Entities.GetContext().Partners.Add(_currenPartner);
                 try
@@ -127,9 +99,6 @@ namespace UP_02.Pages
                     return;
                 }
                 
-
-            }
-
         }
 
         private void BtHistory_Click(object sender, RoutedEventArgs e)

@@ -8,13 +8,13 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Партнеры">
 
-    <Grid>
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <ListView Name="ListPartners" Grid.Column="0" MouseDoubleClick="ListPartners_MouseDoubleClick"  ItemsSource="{Binding Partners}" >
+        <ListView Name="ListPartners" Grid.Column="0" MouseDoubleClick="ListPartners_MouseDoubleClick"  ItemsSource="{Binding Partners}">
 
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -22,7 +22,7 @@
 
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="4*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -46,8 +46,16 @@
                                 <TextBlock Text="{Binding Name}" />-->
                                 <TextBlock Text="{Binding Director}"  />
                                 <TextBlock Text="{Binding PhoneNumber}" />
-                                <TextBlock Text="Рейтинг: "  />
-                                <TextBlock Text="{Binding Rating}" />
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="Рейтинг: {0}">
+                                            <Binding Path="Rating" />
+
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                                <!--<TextBlock Text="Рейтинг: "  />
+                                <TextBlock Text="{Binding Rating}" />-->
 
                             </StackPanel>
                             <!--<TextBlock Grid.Column="1" Text="{Binding Discount}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" />-->
@@ -57,7 +65,7 @@
             </ListView.ItemTemplate>
         </ListView>
         <Button x:Name="BtAdd" Content="Добавить" Grid.Column="1" Margin="0,0,55,30"   HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtAdd_Click" />
-        <Image Source="/Resources/logo.png" Grid.Column="1" Margin="0,50,55,0" Height="190" VerticalAlignment="Top" HorizontalAlignment="Right" Width="190"/>
+        <Image Source="/Resources/logo.png" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="190"  Width="190" Margin="0,35,55,0"/>
 
     </Grid>
 </Page>
