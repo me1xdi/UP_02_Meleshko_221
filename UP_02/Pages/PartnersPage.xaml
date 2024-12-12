@@ -31,7 +31,7 @@
                                 <RowDefinition Height="2*" />
                                 <!-- Остальной контент -->
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                            <TextBlock  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                                 <TextBlock.Text>
                                     <MultiBinding StringFormat="{}{0} | {1}">
                                         <Binding Path="PartnersType.Type" />
@@ -39,7 +39,7 @@
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
-                            <TextBlock Grid.Row="0" Grid.Column="1" Text="%"  FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Top" />
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding discount}"  FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Top" />
                             <StackPanel Grid.Row="1" Grid.Column="0" >
 
                                 <!--<TextBlock Text="{Binding PartnersType.Type}"   />
