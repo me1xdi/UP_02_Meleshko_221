@@ -94,6 +94,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\MaterialType.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -16,7 +16,7 @@ namespace UP_02.Model
     public partial class Entities : DbContext
     {
         private static Entities _context;
-        
+       
 
 
         public Entities()
@@ -35,6 +35,7 @@ namespace UP_02.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<MaterialType> MaterialType { get; set; }
         public virtual DbSet<PartnerProducts> PartnerProducts { get; set; }
         public virtual DbSet<Partners> Partners { get; set; }
         public virtual DbSet<PartnersType> PartnersType { get; set; }
