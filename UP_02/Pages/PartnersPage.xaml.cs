@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UP_02.Model;
+using UP_02.Up_02;
 
 namespace UP_02.Pages
 {
@@ -57,6 +58,12 @@ namespace UP_02.Pages
           
         }
 
+        private void BtMethod_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(Module4.MaterialDeffect(2, 2, 4, 1.2, 1.4).ToString(), "Результат метода", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+        }
+
+       
     }
     class Partn : Partners
     {

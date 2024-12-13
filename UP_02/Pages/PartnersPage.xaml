@@ -66,6 +66,7 @@
         </ListView>
         <Button x:Name="BtAdd" Content="Добавить" Grid.Column="1" Margin="0,0,55,30"   HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtAdd_Click" />
         <Image Source="/Resources/logo.png" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="190"  Width="190" Margin="0,35,55,0"/>
+        <Button x:Name="BtMethod" Content="Метод" Grid.Column="1" Margin="0,0,55,70" Click="BtMethod_Click" Height="35" Width="190" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Page>
