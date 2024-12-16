@@ -170,6 +170,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\Er-диаграмма.pdf" />
+    <None Include="Resources\ДиаграммаПрецедентов_Мелешко.pdf" />
+    <None Include="Resources\ТестовыеСценарии_Мелешко.docx" />
+    <None Include="Resources\ТестовыеСценарии_Мелешко.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -178,9 +181,6 @@
   <ItemGroup>
     <Resource Include="Resources\Мастер пол.ico" />
     <Resource Include="Resources\Мастер пол.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\GetContext.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
