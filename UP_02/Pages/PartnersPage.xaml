@@ -7,19 +7,15 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Партнеры">
-
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
         <ListView Name="ListPartners" Grid.Column="0" MouseDoubleClick="ListPartners_MouseDoubleClick"  ItemsSource="{Binding Partners}">
-
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderThickness="1" BorderBrush="Gray" Margin="5" Padding="10" Width="450">
-
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
@@ -27,9 +23,7 @@
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="2*" />
-                                <!-- Верхняя строка -->
                                 <RowDefinition Height="2*" />
-                                <!-- Остальной контент -->
                             </Grid.RowDefinitions>
                             <TextBlock  Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" >
                                 <TextBlock.Text>
@@ -41,32 +35,23 @@
                             </TextBlock>
                             <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding discount}"  FontSize="16" HorizontalAlignment="Right" VerticalAlignment="Top" />
                             <StackPanel Grid.Row="1" Grid.Column="0" >
-
-                                <!--<TextBlock Text="{Binding PartnersType.Type}"   />
-                                <TextBlock Text="{Binding Name}" />-->
                                 <TextBlock Text="{Binding Director}"  />
                                 <TextBlock Text="{Binding PhoneNumber}" />
                                 <TextBlock>
                                     <TextBlock.Text>
                                         <MultiBinding StringFormat="Рейтинг: {0}">
                                             <Binding Path="Rating" />
-
                                         </MultiBinding>
                                     </TextBlock.Text>
                                 </TextBlock>
-                                <!--<TextBlock Text="Рейтинг: "  />
-                                <TextBlock Text="{Binding Rating}" />-->
-
                             </StackPanel>
-                            <!--<TextBlock Grid.Column="1" Text="{Binding Discount}" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" />-->
                         </Grid>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
         <Button x:Name="BtAdd" Content="Добавить" Grid.Column="1" Margin="0,0,55,30"   HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtAdd_Click" />
-        <Image Source="/Resources/logo.png" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="190"  Width="190" Margin="0,35,55,0"/>
+        <Image Source="/Resources/Мастер пол.png" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="190"  Width="190" Margin="0,35,55,0"/>
         <Button x:Name="BtMethod" Content="Метод" Grid.Column="1" Margin="0,0,55,70" Click="BtMethod_Click" Height="35" Width="190" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-
     </Grid>
 </Page>

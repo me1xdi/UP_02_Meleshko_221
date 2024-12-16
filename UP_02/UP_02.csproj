@@ -169,14 +169,15 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\Er-диаграмма.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Resource Include="Resources\icon.ico" />
-    <Resource Include="Resources\logo.png" />
+    <Resource Include="Resources\Мастер пол.ico" />
+    <Resource Include="Resources\Мастер пол.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\GetContext.txt" />

@@ -29,27 +29,23 @@ namespace UP_02.Pages
             if (selectedPartner != null)
             {
                 _currenPartner = selectedPartner;
-
             }
             else 
-            { 
+            {
                 BtHistory.Visibility = Visibility.Hidden; 
             }
             DataContext = _currenPartner;
             CbType.ItemsSource = Entities.GetContext().PartnersType.ToList();
         }
-
         private void BtSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-
             if (string.IsNullOrWhiteSpace(_currenPartner.Name))
                 errors.AppendLine("Укажите наименование партнера!");
             if (CbType.Text == "")
                 errors.AppendLine("Выберите тип партнера!");
             if (_currenPartner.Rating.ToString()=="")
                 errors.AppendLine("Укажите рейтинг партнера!");
-
             if (string.IsNullOrWhiteSpace(_currenPartner.Address))
                 errors.AppendLine("Укажите юридический адрес!");
             if (string.IsNullOrWhiteSpace(_currenPartner.INN))
@@ -64,9 +60,6 @@ namespace UP_02.Pages
                 MessageBox.Show(errors.ToString(), "Внимание", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            //string pattern = "^\\d{10}$";
-            //string pattern = @"^[+]7\d{0,10}$";
-            //string pattern1 = @"^\d{0,1}$";
 
             if (!Regex.IsMatch(TbRate.Text, @"^\d{1}$|^10$") )
             {
@@ -85,27 +78,25 @@ namespace UP_02.Pages
                 return;
             }
            
-                if (_currenPartner.Id == 0)
-                    Entities.GetContext().Partners.Add(_currenPartner);
-                try
-                {
-                    Entities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные успешно сохранены!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
-                    NavigationService.Navigate(new PartnersPage());
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message.ToString());
-                    return;
-                }
+            if (_currenPartner.Id == 0)
+                Entities.GetContext().Partners.Add(_currenPartner);
+            try
+            {
+                Entities.GetContext().SaveChanges();
+                MessageBox.Show("Данные успешно сохранены!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                NavigationService.Navigate(new PartnersPage());
+            }
+            catch (Exception o)
+            {
+                MessageBox.Show(o.Message.ToString());
+                return;
+            }
                 
         }
 
         private void BtHistory_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new PartnerHistoryPage(_currenPartner));
-        }
-
-        
+        }      
     }
 }

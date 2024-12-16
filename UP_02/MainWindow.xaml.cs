@@ -24,13 +24,11 @@ namespace UP_02
         {
             InitializeComponent();
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (MainFrame.CanGoBack)
                 MainFrame.GoBack();
         }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (MessageBox.Show("Вы действительно хотите выйти?", "Выход из приложения", MessageBoxButton.OKCancel, MessageBoxImage.Question) == MessageBoxResult.Cancel)
@@ -38,7 +36,6 @@ namespace UP_02
                 e.Cancel = true;
             }
         }
-
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
             if (!(e.Content is Page page)) return;

@@ -22,9 +22,7 @@ namespace UP_02.Up_02
                 double materCount = quantity+ quantity * typeMaterial.Select(x => x.DefectPercent).FirstOrDefault();
                 result = materCount * par1 * par2 * coeff;
                 return (int)Math.Ceiling(result);
-            }
-            
-        }
-        
+            }           
+        }       
     }
 }
