@@ -197,6 +197,8 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\script.sql" />
+    <Resource Include="Resources\БлокСхема_РаботаСПартнерами_Мелешко.png" />
+    <Resource Include="Resources\БлокСхема_РасчетСкидки_Мелешко.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
