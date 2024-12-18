@@ -40,10 +40,10 @@ namespace UP_02.Pages
         {
             NavigationService.Navigate(new AddPartnersPage(null));            
         }
-        private void BtMethod_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show(Module4.MaterialDeffect(2, 2, 4, 1.2, 1.4).ToString(), "Результат метода", MessageBoxButton.OK, MessageBoxImage.Asterisk);
-        }
+        //private void BtMethod_Click(object sender, RoutedEventArgs e)
+        //{
+        //    MessageBox.Show(Module4.MaterialDeffect(2, 2, 4, 1.2, 1.4).ToString(), "Результат метода", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+        //}
 
         private void ListPartners_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
