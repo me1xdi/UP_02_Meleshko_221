@@ -170,6 +170,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\Er-диаграмма.pdf" />
+    <None Include="Resources\БлокСхема_РаботаСПартнерами_Мелешко.pdf" />
+    <None Include="Resources\БлокСхема_РасчетСкидки_Мелешко.pdf" />
     <None Include="Resources\ДиаграммаПрецедентов_Мелешко.pdf" />
     <None Include="Resources\ТестовыеСценарии_Мелешко.docx" />
     <None Include="Resources\ТестовыеСценарии_Мелешко.pdf" />
@@ -197,8 +199,6 @@
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\script.sql" />
-    <Resource Include="Resources\БлокСхема_РаботаСПартнерами_Мелешко.png" />
-    <Resource Include="Resources\БлокСхема_РасчетСкидки_Мелешко.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
